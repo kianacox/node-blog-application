@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs') %>
+<% if (posts.length < 1 )  { %>
+  <p class="no-posts">No posts available. Please create a new post.</p>
+  <% } %>
+<% if (posts) { %>
+    <% posts.forEach(post => { %>
+      <li>
+        <a href="/posts/<%= post.id %>"><%= post.title %></a>
+      </li>
+    <% }) %>
+  <% } %>
+
+
+  
+<%- include('partials/footer.ejs') %>

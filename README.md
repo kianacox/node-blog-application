@@ -1,0 +1,39 @@
+# Node Blog Application
+
+## Project Overview
+
+This is a simple blog application built with Node.js and Express.js. The goal of this project is to explore the basics of building a web application using Node and Express, focusing on implementing full CRUD (Create, Read, Update, Delete) functionalities. Instead of a database, the application uses a JSON file to store blog posts, serving as a simple data store for learning purposes.
+
+## Tools and Technologies Used
+
+- Node.js
+- Express.js
+- EJS (Embedded JavaScript templating)
+- method-override (for supporting PUT/DELETE in forms)
+- JSON file for data storage (no database)
+
+## Running Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd node-blog-application
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   The server will run at [http://localhost:3000](http://localhost:3000).
+
+## Notice: Work in Progress
+
+This project is a work in progress. The following features are still to be implemented:
+
+- Creating new blog posts
+- Editing/updating existing blog posts
+
+Feel free to explore, fork, and contribute as I continue to build out the full CRUD functionality!

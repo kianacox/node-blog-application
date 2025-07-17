@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+    <% if (!post) { %>
+        <p class="no-post">Post not found.</p>
+    <% } %>
+    <% if (post) { %> 
+     
+        <section class="post">
+            <div class="post-header">
+                <a href="/">Back to Home</a>
+                <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
+                    <button class="delete-button" type="submit">Delete Post</button>
+                </form>
+            </div>
+ 
+        <h1 class="post-title"><%= post.title %></h1>
+        <p class="post-content"><%= post.content %></p>
+            </section>
+    <% } %> 
+
+<%- include('partials/footer.ejs') %>

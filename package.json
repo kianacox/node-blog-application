@@ -1,0 +1,27 @@
+{
+  "name": "blog-application",
+  "version": "1.0.0",
+  "description": "A simple blog application created using Node, Express and EJS.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Kiana Cox",
+  "license": "ISC",
+  "dependencies": {
+    "@types/method-override": "^3.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.14",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "prettier-plugin-ejs": "^1.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
