@@ -16,3 +16,16 @@ export const getPosts = async (): Promise<Post[]> => {
     return [];
   }
 };
+
+export const writePosts = async (posts: Post[]): Promise<void> => {
+  try {
+    const filePath = getFilePath("../data/posts.json");
+    await fs.writeFile(filePath, JSON.stringify(posts, null, 2));
+  } catch (err) {
+    console.error("Error writing to posts.json:", err);
+  }
+};
+
+export const generateId = (): number => {
+  return Math.floor(Math.random() * 1000000);
+};

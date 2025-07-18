@@ -3,18 +3,28 @@
         <p class="no-post">Post not found.</p>
     <% } %>
     <% if (post) { %> 
-     
-        <section class="post">
-            <div class="post-header">
-                <a href="/">Back to Home</a>
+        <article class="post">
+            <header class="post-header">
+                <nav aria-label="Post navigation">
+                    <a href="/" aria-label="Back to home page">← Back to Home</a>
+                </nav>
                 <form action="/posts/<%= post.id %>?_method=DELETE" method="POST">
-                    <button class="delete-button" type="submit">Delete Post</button>
+                    <button 
+                        class="delete-button" 
+                        type="submit" 
+                        aria-label="Delete post: <%= post.title %>"
+                        onclick="return confirm('Are you sure you want to delete this post?')"
+                    >
+                        Delete Post
+                    </button>
                 </form>
-            </div>
+            </header>
  
-        <h1 class="post-title"><%= post.title %></h1>
-        <p class="post-content"><%= post.content %></p>
-            </section>
+            <h1 class="post-title"><%= post.title %></h1>
+            <div class="post-content">
+                <p><%= post.content %></p>
+            </div>
+        </article>
     <% } %> 
 
 <%- include('partials/footer.ejs') %>

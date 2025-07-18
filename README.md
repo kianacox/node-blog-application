@@ -4,6 +4,8 @@
 
 This is a simple blog application built with Node.js and Express.js. The goal of this project is to explore the basics of building a web application using Node and Express, focusing on implementing full CRUD (Create, Read, Update, Delete) functionalities. Instead of a database, the application uses a JSON file to store blog posts, serving as a simple data store for learning purposes.
 
+The application implements an in-memory caching system to optimize performance by loading posts into memory on startup and maintaining cache consistency through dedicated helper functions.
+
 ## Tools and Technologies Used
 
 - Node.js
