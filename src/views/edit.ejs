@@ -1,0 +1,61 @@
+<%- include('partials/header.ejs') %>
+
+<nav aria-label="Page navigation">
+  <a href="/" class="back-to-home-link" aria-label="Back to home page">← Back to Home</a>
+</nav>
+
+<h1 id="edit-post-heading">Edit Post</h1>
+
+<form action="/posts/<%= post.id %>?_method=PATCH" method="POST" novalidate aria-labelledby="edit-post-heading">
+
+  <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+    <div class="error-messages" role="alert" aria-live="polite">
+      <h2 class="error-heading">Please correct the following errors:</h2>
+      <ul>
+        <% errors.forEach(error => { %>
+          <li class="error-message"><%= error %></li>
+        <% }) %>
+      </ul>
+    </div>
+  <% } %>
+
+  <div class="form-group">
+    <label for="edit-title">Title <span class="required" aria-label="required">*</span></label>
+    <input
+      type="text"
+      id="edit-title"
+      name="title"
+      required
+      aria-required="true"
+      aria-describedby="<%= typeof errors !== 'undefined' && errors.some(e => e.includes('Title')) ? 'title-error' : '' %>"
+      value="<%= post.title %>"
+    >
+    <% if (typeof errors !== 'undefined' && errors.some(e => e.includes('Title'))) { %>
+      <div id="title-error" class="field-error" role="alert">Title is required</div>
+    <% } %>
+  </div>
+
+  <div class="form-group">
+    <label for="edit-content">Content <span class="required" aria-label="required">*</span></label>
+    <textarea
+      id="edit-content"
+      name="content"
+      class="content"
+      rows="10"
+      cols="50"
+      required
+      aria-required="true"
+      aria-describedby="<%= typeof errors !== 'undefined' && errors.some(e => e.includes('Content')) ? 'content-error' : '' %>"
+    ><%= post.content %></textarea>
+    <% if (typeof errors !== 'undefined' && errors.some(e => e.includes('Content'))) { %>
+      <div id="content-error" class="field-error" role="alert">Content is required</div>
+    <% } %>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="standard-button">Save</button>
+  </div>
+
+</form>
+
+<%- include('partials/footer.ejs') %>

@@ -21,7 +21,7 @@ body {
   gap: 20px;
 }
 
-.create-post-button {
+.standard-button {
   width: 100%;
   background: #3a86ff;
   color: #fff;
@@ -114,6 +114,20 @@ li a:focus, li a:hover {
   z-index: 2;
 }
 
+.edit-button {
+  background: #3a86ff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  z-index: 2;
+}
+
 .delete-button:hover, .delete-button:focus {
   background: #d90429;
   box-shadow: 0 4px 16px rgba(255, 77, 109, 0.16);
@@ -121,6 +135,12 @@ li a:focus, li a:hover {
   transform: translateY(-2px) scale(1.04);
 }
 
+.edit-button:hover, .edit-button:focus {
+  background: #00509e;
+  box-shadow: 0 4px 16px rgba(58, 134, 255, 0.16);
+  outline: none;
+  transform: translateY(-2px) scale(1.04);
+}
 .error-messages {
   background: #fff5f5;
   border: 1px solid #fed7d7;

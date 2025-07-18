@@ -30,12 +30,3 @@ The application implements an in-memory caching system to optimize performance b
    npm run dev
    ```
    The server will run at [http://localhost:3000](http://localhost:3000).
-
-## Notice: Work in Progress
-
-This project is a work in progress. The following features are still to be implemented:
-
-- Creating new blog posts
-- Editing/updating existing blog posts
-
-Feel free to explore, fork, and contribute as I continue to build out the full CRUD functionality!

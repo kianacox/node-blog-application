@@ -15,11 +15,6 @@
     "content": "Middleware is at the heart of every Express app. Understand how it works and how to write your own custom middleware functions."
   },
   {
-    "id": 8,
-    "title": "Creating Dynamic Views with EJS",
-    "content": "EJS lets you embed JavaScript into your HTML templates. Learn how to use EJS to render server-side views in your Express application."
-  },
-  {
     "id": 9,
     "title": "Error Handling in Express: Best Practices",
     "content": "Robust error handling is essential in any web app. This guide covers how to handle errors gracefully in your Express routes and middleware."
@@ -28,25 +23,5 @@
     "id": 10,
     "title": "Building Your First CRUD App with Node and Express",
     "content": "In this tutorial, we walk through building a simple Create-Read-Update-Delete blog application using Node.js, Express, and EJS templates."
-  },
-  {
-    "title": "test post",
-    "content": "test content",
-    "id": 8
-  },
-  {
-    "title": "test post",
-    "content": "test content",
-    "id": 770972
-  },
-  {
-    "title": "test post",
-    "content": "test content",
-    "id": 301864
-  },
-  {
-    "title": "test post",
-    "content": "test content",
-    "id": 825139
   }
 ]

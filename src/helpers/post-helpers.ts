@@ -29,3 +29,8 @@ export const writePosts = async (posts: Post[]): Promise<void> => {
 export const generateId = (): number => {
   return Math.floor(Math.random() * 1000000);
 };
+
+export const findPostById = async (id: number): Promise<Post | undefined> => {
+  const posts = await getPosts();
+  return posts.find((post: Post) => post.id === id);
+};
